@@ -33,7 +33,7 @@ func main() {
 	for _, app := range chrome {
 		_, err := os.Open(app)
 		if err == nil {
-			err := exec.Command(app, "-kiosk", url).Start()
+			err := exec.Command(app, url).Start()
 
 			if err == nil {
 				started = true
